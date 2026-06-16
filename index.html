@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto Scripting JavaScript - Lucero Barcia</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <h1>Herramientas Interactivas JS</h1>
+        <nav>
+            <button id="btn-ir-calc" class="nav-btn active" onclick="mostrarSeccion('calculadora')">Calculadora Básica</button>
+            <button id="btn-ir-edad" class="nav-btn" onclick="mostrarSeccion('edad')">Calculador de Edad</button>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section id="seccion-calculadora" class="card-section">
+            <h2>Calculadora Básica</h2>
+            <div class="input-group">
+                <input type="number" id="num1" placeholder="Número 1">
+                <input type="number" id="num2" placeholder="Número 2 (Opcional para Factorial)">
+            </div>
+            
+            <div class="grid-operadores">
+                <button onclick="ejecutarOperacion('suma')">+</button>
+                <button onclick="ejecutarOperacion('resta')">-</button>
+                <button onclick="ejecutarOperacion('multiplicacion')">×</button>
+                <button onclick="ejecutarOperacion('division')">÷</button>
+                <button onclick="ejecutarOperacion('potencia')">xʸ</button>
+                <button onclick="ejecutarOperacion('factorial')">x!</button>
+            </div>
+
+            <div class="resultado-box">
+                <strong>Resultado:</strong> <span id="res-calculadora">0</span>
+            </div>
+        </section>
+
+        <section id="seccion-edad" class="card-section hidden">
+            <h2>Calculador de Edad</h2>
+            <div class="input-group">
+                <label for="fecha-nacimiento">Selecciona tu fecha de nacimiento:</label>
+                <input type="date" id="fecha-nacimiento">
+            </div>
+            <button class="action-btn" onclick="calcularEdad()">Calcular Edad</button>
+
+            <div class="resultado-box">
+                <strong>Edad calculada:</strong> <span id="res-edad">-</span>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p><strong>Desarrollado por:</strong> Lucero Barcia</p>
+        <p>Estudiante de Ingeniería en TICs | Universidad Nacional de Chimborazo</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
